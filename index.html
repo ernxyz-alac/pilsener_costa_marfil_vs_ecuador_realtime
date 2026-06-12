@@ -209,10 +209,11 @@
         } catch (error) { console.error("Error loading data:", error); }
     }
 
-    // document.getElementById('testGoalBtn').addEventListener('click', () => {
-    //     showGoal("Mexico", document.getElementById("score").textContent);
-    // });
-
+    /*
+    document.getElementById('testGoalBtn').addEventListener('click', () => {
+        showGoal();
+    });
+    */
     loadData();
     setInterval(loadData, 1000);
 </script>
