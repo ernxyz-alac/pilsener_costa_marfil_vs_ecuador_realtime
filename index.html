@@ -167,7 +167,7 @@
     const STORAGE_KEY = "costa_marfil_vs_ecuador_score";
     
     // 1. Get saved score for UI display and as the baseline for comparison
-    let previousNumbers = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [0, 0];
+    let previousNumbers = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [1, 0];
     document.getElementById("score").innerHTML = `<span>${previousNumbers[0]}</span> &nbsp <span>${previousNumbers[1]}</span>`;
 
     let celebrationActive = false;
@@ -217,7 +217,7 @@
                 const currentNumbers = [homeScore, awayScore];
                 
                 // Compare server score against the last saved score (localStorage)
-                const savedScore = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [0, 0];
+                const savedScore = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [1, 0];
 
                 // only show EC goal
                 if (currentNumbers[1] > savedScore[1]) {
